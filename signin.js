@@ -60,7 +60,7 @@ $('#signin-button').on('click', function() {
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
 		</button>
-		Invalid password for <strong>${email}</strong>. Please try again.
+		An error occured signing-in <strong>${email}</strong>. Please contact Fandango support.
 	</div>
 	`;
 
@@ -73,7 +73,7 @@ $('#signin-button').on('click', function() {
         "dedup_key": `failed_login_${email}`,
         "routing_key": routing_key,
         "payload": {
-            "summary": `Attempted malicious logins for username ${email}`,
+            "summary": `Authenication Service is not responding for user ${email}`,
             "source": "Splunk",
             "severity": "critical",
             "custom_details": {
