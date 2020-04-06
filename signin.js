@@ -73,7 +73,7 @@ $('#signin-button').on('click', function() {
         "dedup_key": `failed_login_${email}`,
         "routing_key": routing_key,
         "payload": {
-            "summary": `Authenication Service is not responding for user ${email}`,
+            "summary": `Authentication Service is not responding for user ${email}`,
             "source": "Splunk",
             "severity": "critical",
             "custom_details": {
